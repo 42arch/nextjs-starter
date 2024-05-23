@@ -7,7 +7,5 @@ export default function Index({
 }) {
   const t = useTranslations('Index')
 
-  console.log(112, locale)
-
-  return <h1 className='p-4 text-3xl font-bold'>{t('title')}</h1>
+  return <h1 className='p-4 font-sans text-3xl font-bold'>{t('title')}</h1>
 }

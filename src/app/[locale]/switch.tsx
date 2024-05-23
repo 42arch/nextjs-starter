@@ -6,7 +6,7 @@ export default function Switch() {
   const handleNavigation = () => {}
 
   return (
-    <div className='flex gap-6 p-4'>
+    <div className='flex gap-6 p-4 font-sans'>
       <Link href='/' locale='en'>
         en
       </Link>
