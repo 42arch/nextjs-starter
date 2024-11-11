@@ -8,17 +8,16 @@ export default async function Index({
 }) {
   const t = await getTranslations('Index')
 
-  const res = await fetch('http://localhost:3000/api/users', {
+  const res = await fetch('http://localhost:3001/api/users', {
     cache: 'no-store'
   })
   const users = await res.json()
 
   return (
-    <div>
-      <h1 className='p-4 font-sans text-3xl font-bold'>{t('title')}</h1>
-
+    <section className='relative overflow-clip bg-gradient-to-t from-blue-100/30 px-4 py-12 dark:from-blue-900/5 sm:px-6 md:mx-auto md:max-w-[1248px]'>
+      <section className='p-4 text-3xl font-bold'>{t('title')}</section>
       <ul>
-        {users.map((user: { id: number; name: string; email: string }) => (
+        {users?.map((user: { id: number; name: string; email: string }) => (
           <li key={user.id}>
             {user.name} - {user.email}
           </li>
@@ -26,6 +25,6 @@ export default async function Index({
       </ul>
 
       <ClientFetch />
-    </div>
+    </section>
   )
 }

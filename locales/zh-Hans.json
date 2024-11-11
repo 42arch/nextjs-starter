@@ -1,5 +1,9 @@
 {
   "Index": {
-    "title": "你好世界!"
+    "title": "你好世界!",
+    "locales": {
+      "en": "英文",
+      "zh-Hans": "中文"
+    }
   }
 }
